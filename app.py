@@ -5,8 +5,9 @@ app = Flask(__name__)
 
 # List of Validators (Add more Node IDs here)
 VALIDATORS = [
-    "NodeID-F3SZA2ZNdRjTBe3GYyRQFDaCXB3DyaZQQ",
-    "NodeID-4G6U36ehMMYjJ3C9gzLmYRzQFho8c4U4w"  # Example additional validator
+    "NodeID-F3SZA2ZNdRjTBe3GYyRQFDaCXB3DyaZQQ" ,
+    "NodeID-2Coj79FAu7rPdSdYdJ27CqTr1K2p45gze",
+    "NodeID-9Efcx2E5uEHZqZSTWT1jPd8DfEkJaZeGj"  # Example additional validator
 ]
 
 # Construct API Endpoint dynamically
@@ -52,4 +53,4 @@ def data():
     return jsonify(uptime_data)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0',port=5001, debug=True)

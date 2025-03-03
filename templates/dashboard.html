@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Validator Uptime Dashboard</title>
-    <link rel="icon" type="image/ico" href="static/avax.ico"/>
+  <link rel="icon" type="image/ico" href="static/avax.ico"/>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
         body {
@@ -41,12 +41,23 @@
             margin: 5px 0;
             font-size: 16px;
         }
+        .footer-description {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #555;
+            text-align: left;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-right: 20px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Validator Uptime Dashboard</h1>
         <div id="validators"></div>
+        <p class="footer-description">SenseiNode is committed to strengthening Avalanche’s decentralization. By operating validators in Latin America and Africa, we enhance network connectivity, improve node peering, and optimize block propagation across the ecosystem.</p>
     </div>
 
     <script>
@@ -70,7 +81,7 @@
 
         $(document).ready(function() {
             fetchData();
-            setInterval(fetchData, 5000); // Refresh every 5 seconds
+            setInterval(fetchData, 60000); // Refresh every 60 seconds
         });
     </script>
 </body>
